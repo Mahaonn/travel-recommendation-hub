@@ -1,0 +1,349 @@
+:root {
+  --color-primary-dark: #31261a;
+  --color-primary-light: #faf4ea;
+  --color-secondary-dark: #a18268;
+  --color-brand-dark: #465929;
+  --color-brand-normal: #57969b;
+  --color-brand-light: #cfcfbc;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.link {
+  color: var(--color-primary-light);
+  transition: color 0.3s;
+}
+.link:hover {
+  color: var(--color-brand-normal);
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-primary-light);
+  background-color: var(--color-brand-normal);
+  border: 2px solid var(--color-brand-normal);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: var(--color-secondary-dark);
+}
+
+/* index */
+/* header */
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 10;
+  background: rgb(0 0 0 / 25%);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-primary-light);
+  font-family: "Georgia", serif;
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.logo-text {
+  color: var(--color-primary-light);
+}
+
+.header-menu {
+  display: flex;
+  gap: 24px;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.search-container {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.input-control {
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid var(--color-secondary-dark);
+  border-radius: 16px;
+  background-color: var(--color-primary-light);
+  flex-grow: 1;
+}
+
+.input-control::placeholder {
+  color: var(--color-secondary-dark);
+}
+
+.input-control:focus {
+  border-color: var(--color-brand-normal);
+  outline: none;
+}
+
+/* hero */
+
+.hero-section {
+  padding: 272px 0 120px;
+  background-image: linear-gradient(
+      103deg,
+      rgba(1, 46, 33, 0.78) 2.03%,
+      rgba(18, 18, 17, 0.6) 58.46%,
+      rgba(18, 18, 17, 0) 90.36%
+    ),
+    url("./images/maldives-1993704.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  text-align: left;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 80px 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-top: 64px;
+}
+
+.social-line {
+  width: 2px;
+  height: 256px;
+  background-color: var(--color-primary-light);
+  margin-bottom: 64px;
+}
+
+.social-icons-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.social-icons-vertical img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+}
+
+.hero-content {
+  max-width: 720px;
+  color: var(--color-primary-light);
+}
+
+.hero-section__title {
+  font-size: clamp(67px, 5vw + 35px, 96px);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 24px;
+  color: var(--color-primary-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-section p {
+  max-width: 720px;
+  margin: 0 auto 32px;
+  font-size: 20px;
+  color: var(--color-primary-light);
+}
+
+.book-now {
+  margin-top: 16px;
+}
+
+.hero-results {
+  display: grid;
+  gap: 24px;
+  max-width: 400px;
+}
+
+.result-card {
+  background-color: var(--color-brand-light);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.result-image {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.result-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+#resultsContainer .result-description {
+  font-size: 16px;
+  color: var(--color-brand-dark);
+}
+
+/* About Us */
+
+.about-hero {
+  padding: 48px;
+}
+
+.about-hero_grid {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 64px;
+  align-items: center;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.about-content {
+  max-width: 1280px;
+  color: var(--color-primary-light);
+}
+
+.about-section__title {
+  font-size: clamp(16px, 5vw + 35px, 72px);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 24px;
+  color: var(--color-primary-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-section--about {
+  padding: 160px 0 80px;
+  background-image: linear-gradient(
+      103deg,
+      rgba(1, 46, 33, 0.78) 2.03%,
+      rgba(18, 18, 17, 0.6) 58.46%,
+      rgba(18, 18, 17, 0) 90.36%
+    ),
+    url("./images/maldives-1993704.jpg"); /* заменишь на нужное */
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+.team-section {
+  padding: 80px 0;
+  background-color: var(--color-brand-light);
+  text-align: center;
+}
+
+.team-section__title {
+  font-size: 48px;
+  margin-bottom: 48px;
+  color: var(--color-brand-dark);
+}
+
+.team-section__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.team-card {
+  background-color: var(--color-primary-light);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.team-card__photo {
+  width: 15%;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.team-card__name {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.team-card__role {
+  font-size: 18px;
+  color: var(--color-secondary-dark);
+}
