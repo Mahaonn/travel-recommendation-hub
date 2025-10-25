@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - TravelBloom</title>
     <link rel="stylesheet" href="styles.css" />
-    <title>Travel Recommendation</title>
   </head>
   <body>
     <header class="header">
@@ -24,44 +24,77 @@
         </div>
       </div>
     </header>
-    <main>
-      <div class="hero-section">
-        <div class="hero-grid">
-          <div class="hero-left">
-            <div class="social-line"></div>
-            <div class="social-icons-vertical">
-              <a href="#" aria-label="Facebook">
-                <img src="./images/icon-facebook.svg" alt="Facebook" />
-              </a>
-              <a href="#" aria-label="Instagram">
-                <img src="./images/icon-instagram.svg" alt="Instagram" />
-              </a>
-              <a href="#" aria-label="Twitter">
-                <img src="./images/icon-twitter.svg" alt="Twitter" />
-              </a>
-              <a href="#" aria-label="Youtube">
-                <img src="./images/icon-youtube.svg" alt="Youtube" />
-              </a>
+    <section class="contact-section section">
+      <div class="contact-grid">
+        <div class="container-left">
+          <div class="social-line"></div>
+          <div class="social-icons-vertical">
+            <a href="#" aria-label="Facebook">
+              <img src="./images/icon-facebook.svg" alt="Facebook" />
+            </a>
+            <a href="#" aria-label="Instagram">
+              <img src="./images/icon-instagram.svg" alt="Instagram" />
+            </a>
+            <a href="#" aria-label="Twitter">
+              <img src="./images/icon-twitter.svg" alt="Twitter" />
+            </a>
+            <a href="#" aria-label="Youtube">
+              <img src="./images/icon-youtube.svg" alt="Youtube" />
+            </a>
+          </div>
+        </div>
+        <div class="contact-content">
+          <h1 class="contact-title">CONTACT US</h1>
+          <p class="contact-intro">Get in touch</p>
+        </div>
+        <div class="contact-form-container">
+          <form name="contact-form" autocomplete="off">
+            <div class="contact-section__form-field input">
+              <label class="input__label visually-hidden" for="user-name">
+                Enter your name
+              </label>
+              <input
+                class="input__control"
+                type="text"
+                id="user-name"
+                name="user-name"
+                placeholder="Enter your name"
+                required
+              />
             </div>
-          </div>
-          <div class="hero-content">
-            <h1 class="hero-section__title">
-              <span class="text-brand">explore</span><br />
-              <span class="text-brand">dream</span><br />
-              <span class="text-brand">destination</span>
-            </h1>
-            <p>
-              It encourages exploration of unfamiliar territories, embracing
-              diverse cultures and landscapes, while pursuing the desired
-              destination that captivates the heart and ignites a sense of
-              wonder.
-            </p>
-            <button class="button book-now">BOOK NOW</button>
-          </div>
-          <div id="resultsContainer" class="hero-results"></div>
+
+            <div class="contact-section__form-field input">
+              <label class="input__label visually-hidden" for="user-email">
+                Email
+              </label>
+              <input
+                class="input__control"
+                type="email"
+                id="user-email"
+                name="user-email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+            <div class="contact-section__form-field input">
+              <label class="input__label visually-hidden" for="user-message"
+                >Message:</label
+              >
+              <textarea
+                class="input__control input"
+                name="message"
+                id="user-message"
+                placeholder="Enter your message"
+              ></textarea>
+            </div>
+
+            <button class="contact-section__button button" type="submit">
+              Submit
+            </button>
+          </form>
         </div>
       </div>
-    </main>
-    <script src="travel_recommendation.js"></script>
+    </section>
   </body>
 </html>
