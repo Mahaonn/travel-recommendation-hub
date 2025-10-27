@@ -1,8 +1,6 @@
-// Получение элементов
 const searchInput = document.getElementById("searchInput");
 const resultsContainer = document.getElementById("resultsContainer");
 
-// Загрузка данных из JSON
 let travelData = {};
 
 fetch("travel_recommendation_api.json")
@@ -15,7 +13,6 @@ fetch("travel_recommendation_api.json")
     console.error("Error loading travel data:", error);
   });
 
-// Обработка поиска
 function handleSearch() {
   const query = searchInput.value.trim().toLowerCase();
   resultsContainer.innerHTML = "";
@@ -24,7 +21,6 @@ function handleSearch() {
 
   const matchedItems = [];
 
-  // Фильтрация по ключевым словам
   if (["beach", "beaches"].includes(query)) {
     matchedItems.push(...travelData.beaches.slice(0, 2));
   } else if (["temple", "temples"].includes(query)) {
@@ -34,7 +30,6 @@ function handleSearch() {
       matchedItems.push(...country.cities.slice(0, 2));
     });
   } else {
-    // Поиск по описанию и названию
     ["beaches", "temples"].forEach((category) => {
       travelData[category].forEach((item) => {
         if (
@@ -58,24 +53,23 @@ function handleSearch() {
     });
   }
 
-  // Отображение результатов
   if (matchedItems.length > 0) {
     matchedItems.forEach((item) => {
       const card = document.createElement("div");
-      card.classList.add("result-card");
+      card.classList.add("hero__result-card");
 
       const img = document.createElement("img");
       img.src = item.imageUrl;
       img.alt = item.name;
-      img.classList.add("result-image");
+      img.classList.add("hero__result-image");
 
       const name = document.createElement("h3");
       name.textContent = item.name;
-      name.classList.add("result-title");
+      name.classList.add("hero__result-title");
 
       const desc = document.createElement("p");
       desc.textContent = item.description;
-      desc.classList.add("result-description");
+      desc.classList.add("hero__result-description");
 
       card.appendChild(img);
       card.appendChild(name);
@@ -87,12 +81,10 @@ function handleSearch() {
   }
 }
 
-// Очистка результатов
 function handleReset() {
   searchInput.value = "";
   resultsContainer.innerHTML = "";
 }
 
-// Привязка событий к кнопкам
 document.getElementById("searchButton").addEventListener("click", handleSearch);
 document.getElementById("clearButton").addEventListener("click", handleReset);

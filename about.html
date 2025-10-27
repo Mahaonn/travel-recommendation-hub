@@ -9,26 +9,28 @@
   <body>
     <header class="header">
       <div class="container">
-        <div class="header-container">
-          <nav class="header-nav">
-            <a href="./index.html" class="logo">
+        <div class="header__container">
+          <nav class="header__nav">
+            <a href="./index.html" class="header__logo">
               <img src="./images/logo.svg" alt="TravelBloom logo" width="72" />
-              <span class="logo-text">TravelBloom</span>
+              <span class="header__logo-text">TravelBloom</span>
             </a>
-            <ul class="header-menu">
-              <li><a class="link" href="index.html">Home</a></li>
-              <li><a class="link" href="about.html">About Us</a></li>
-              <li><a class="link" href="contact.html">Contact Us</a></li>
+            <ul class="header__menu">
+              <li><a class="header__link" href="index.html">Home</a></li>
+              <li><a class="header__link" href="about.html">About Us</a></li>
+              <li>
+                <a class="header__link" href="contact.html">Contact Us</a>
+              </li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
-    <section class="section">
-      <div class="about-grid">
-        <div class="container-left">
-          <div class="social-line"></div>
-          <div class="social-icons-vertical">
+    <section class="about__section section">
+      <div class="about__grid">
+        <div class="sidebar">
+          <div class="sidebar__social-line"></div>
+          <div class="sidebar__social-icons">
             <a href="#" aria-label="Facebook">
               <img src="./images/icon-facebook.svg" alt="Facebook" />
             </a>
@@ -43,9 +45,9 @@
             </a>
           </div>
         </div>
-        <div class="about-content">
-          <h1 class="about-title">ABOUT US</h1>
-          <div class="about-description">
+        <div class="about__content">
+          <h1 class="about__title">ABOUT US</h1>
+          <div class="about__description">
             <p>
               Welcome to Our Company! We are a team of passionate individuals
               dedicated to providing excellent services/products to our
@@ -66,50 +68,50 @@
           </div>
 
           <div class="team-section">
-            <div class="team-cards">
-              <h2>
+            <div class="team__cards">
+              <h2 class="team__title">
                 Our <br />
                 Team
               </h2>
-              <div class="team-card">
-                <div class="member-avatar">
+              <div class="team__member">
+                <div class="team__avatar">
                   <img
                     src="https://static.vecteezy.com/system/resources/previews/009/398/577/original/man-avatar-clipart-illustration-free-png.png"
                     alt="John Doe"
                   />
                 </div>
-                <div class="member-info">
-                  <p class="member-name">John Doe</p>
-                  <p class="member-description">John is responsible for...</p>
-                  <button class="member-role">CEO</button>
+                <div class="team__info">
+                  <p class="team__name">John Doe</p>
+                  <p class="team__description">John is responsible for...</p>
+                  <button class="team__role">CEO</button>
                 </div>
               </div>
-              <div class="team-card">
-                <div class="member-avatar">
+              <div class="team__member">
+                <div class="team__avatar">
                   <img
                     src="https://static.vecteezy.com/system/resources/previews/009/398/577/original/man-avatar-clipart-illustration-free-png.png"
                     alt="Celina Thomas"
                   />
                 </div>
-                <div class="member-info">
-                  <p class="member-name">Celina Thomas</p>
-                  <p class="member-description">
+                <div class="team__info">
+                  <p class="team__name">Celina Thomas</p>
+                  <p class="team__description">
                     Celina Thomas is responsible for...
                   </p>
-                  <button class="member-role">Team Lead</button>
+                  <button class="team__role">Team Lead</button>
                 </div>
               </div>
-              <div class="team-card">
-                <div class="member-avatar">
+              <div class="team__member">
+                <div class="team__avatar">
                   <img
                     src="https://static.vecteezy.com/system/resources/previews/009/398/577/original/man-avatar-clipart-illustration-free-png.png"
                     alt="Mike Tysen"
                   />
                 </div>
-                <div class="member-info">
-                  <p class="member-name">Mike Tysen</p>
-                  <p class="member-description">Mike is responsible for...</p>
-                  <button class="member-role">Delivery Head</button>
+                <div class="team__info">
+                  <p class="team__name">Mike Tysen</p>
+                  <p class="team__description">Mike is responsible for...</p>
+                  <button class="team__role">Delivery Head</button>
                 </div>
               </div>
             </div>

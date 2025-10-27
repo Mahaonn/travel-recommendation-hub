@@ -9,38 +9,41 @@
   <body>
     <header class="header">
       <div class="container">
-        <div class="header-container">
-          <nav class="header-nav">
-            <a href="./index.html" class="logo">
+        <div class="header__container">
+          <nav class="header__nav">
+            <a href="./index.html" class="header__logo">
               <img src="./images/logo.svg" alt="TravelBloom logo" width="72" />
-              <span class="logo-text">TravelBloom</span>
+              <span class="header__logo-text">TravelBloom</span>
             </a>
-            <ul class="header-menu">
-              <li><a class="link" href="index.html">Home</a></li>
-              <li><a class="link" href="about.html">About Us</a></li>
-              <li><a class="link" href="contact.html">Contact Us</a></li>
+            <ul class="header__menu">
+              <li><a class="header__link" href="index.html">Home</a></li>
+              <li><a class="header__link" href="about.html">About Us</a></li>
+              <li>
+                <a class="header__link" href="contact.html">Contact Us</a>
+              </li>
             </ul>
           </nav>
-          <div class="search-container">
+          <div class="header__search">
             <input
               id="searchInput"
-              class="input-control"
+              class="header__search-input"
               type="text"
               placeholder="Enter a destination or keyword"
             />
-            <span class="icon">🔍</span>
+            <span class="header__search-icon">🔍</span>
             <button id="searchButton" class="button">Search</button>
             <button id="clearButton" class="button">Clear</button>
           </div>
         </div>
       </div>
     </header>
+
     <main>
-      <section class="hero-section">
-        <div class="hero-grid">
-          <div class="container-left">
-            <div class="social-line"></div>
-            <div class="social-icons-vertical">
+      <section class="hero">
+        <div class="hero__grid">
+          <div class="sidebar">
+            <div class="sidebar__social-line"></div>
+            <div class="sidebar__social-icons">
               <a href="#" aria-label="Facebook">
                 <img src="./images/icon-facebook.svg" alt="Facebook" />
               </a>
@@ -55,17 +58,17 @@
               </a>
             </div>
           </div>
-          <div class="hero-content">
-            <h1>EXPLORE<br />DREAM<br />DESTINATION</h1>
-            <p>
+          <div class="hero__content">
+            <h1 class="hero__title">EXPLORE<br />DREAM<br />DESTINATION</h1>
+            <p class="hero__description">
               It encourages exploration of unfamiliar territories, embracing
               diverse cultures and landscapes, while pursuing the desired
               destination that captivates the heart and ignites a sense of
               wonder.
             </p>
-            <button class="button book-now">BOOK NOW</button>
+            <button class="button hero__button--book">BOOK NOW</button>
           </div>
-          <div id="resultsContainer" class="hero-results"></div>
+          <div id="resultsContainer" class="hero__results"></div>
         </div>
       </section>
     </main>

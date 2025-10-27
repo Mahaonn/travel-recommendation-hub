@@ -9,26 +9,28 @@
   <body>
     <header class="header">
       <div class="container">
-        <div class="header-container">
-          <nav class="header-nav">
-            <a href="./index.html" class="logo">
+        <div class="header__container">
+          <nav class="header__nav">
+            <a href="./index.html" class="header__logo">
               <img src="./images/logo.svg" alt="TravelBloom logo" width="72" />
-              <span class="logo-text">TravelBloom</span>
+              <span class="header__logo-text">TravelBloom</span>
             </a>
-            <ul class="header-menu">
-              <li><a class="link" href="index.html">Home</a></li>
-              <li><a class="link" href="about.html">About Us</a></li>
-              <li><a class="link" href="contact.html">Contact Us</a></li>
+            <ul class="header__menu">
+              <li><a class="header__link" href="index.html">Home</a></li>
+              <li><a class="header__link" href="about.html">About Us</a></li>
+              <li>
+                <a class="header__link" href="contact.html">Contact Us</a>
+              </li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
-    <section class="contact-section section">
-      <div class="contact-grid">
-        <div class="container-left">
-          <div class="social-line"></div>
-          <div class="social-icons-vertical">
+    <section class="contact__section section">
+      <div class="contact__grid">
+        <div class="sidebar">
+          <div class="sidebar__social-line"></div>
+          <div class="sidebar__social-icons">
             <a href="#" aria-label="Facebook">
               <img src="./images/icon-facebook.svg" alt="Facebook" />
             </a>
@@ -43,18 +45,18 @@
             </a>
           </div>
         </div>
-        <div class="contact-content">
-          <h1 class="contact-title">CONTACT US</h1>
-          <p class="contact-intro">Get in touch</p>
+        <div class="contact__content">
+          <h1 class="contact__title">CONTACT US</h1>
+          <h2 class="contact__subtitle">Get in touch</h2>
         </div>
-        <div class="contact-form-container">
-          <form name="contact-form" autocomplete="off">
-            <div class="contact-section__form-field input">
-              <label class="input__label visually-hidden" for="user-name">
+        <div class="contact__form-wrapper">
+          <form class="contact__form" name="contact-form" autocomplete="off">
+            <div class="contact__field input">
+              <label class="contact__label visually-hidden" for="user-name">
                 Enter your name
               </label>
               <input
-                class="input__control"
+                class="contact__input"
                 type="text"
                 id="user-name"
                 name="user-name"
@@ -63,12 +65,12 @@
               />
             </div>
 
-            <div class="contact-section__form-field input">
-              <label class="input__label visually-hidden" for="user-email">
+            <div class="contact__field input">
+              <label class="contact__label visually-hidden" for="user-email">
                 Email
               </label>
               <input
-                class="input__control"
+                class="contact__input"
                 type="email"
                 id="user-email"
                 name="user-email"
@@ -77,21 +79,19 @@
               />
             </div>
 
-            <div class="contact-section__form-field input">
-              <label class="input__label visually-hidden" for="user-message"
+            <div class="contact__field input">
+              <label class="contact__label visually-hidden" for="user-message"
                 >Message:</label
               >
               <textarea
-                class="input__control input"
+                class="contact__input input"
                 name="message"
                 id="user-message"
                 placeholder="Enter your message"
               ></textarea>
             </div>
 
-            <button class="contact-section__button button" type="submit">
-              Submit
-            </button>
+            <button class="contact__button button" type="submit">Submit</button>
           </form>
         </div>
       </div>

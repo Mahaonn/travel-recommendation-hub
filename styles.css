@@ -56,6 +56,29 @@ a {
   padding: 0 24px;
 }
 
+.section {
+  min-height: 100vh;
+  background-image: linear-gradient(
+      103deg,
+      rgba(1, 46, 33, 0.78) 2.03%,
+      rgba(18, 18, 17, 0.6) 58.46%,
+      rgba(18, 18, 17, 0) 90.36%
+    ),
+    url("./images/maldives-1993704.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  text-align: left;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-top: 64px;
+}
+
 input {
   appearance: none;
   background-color: var(--color-primary-light);
@@ -99,30 +122,6 @@ input:-webkit-autofill {
   color: var(--color-secondary-dark);
 }
 
-.section {
-  min-height: 100vh;
-  padding: 20px 0 120px;
-  background-image: linear-gradient(
-      103deg,
-      rgba(1, 46, 33, 0.78) 2.03%,
-      rgba(18, 18, 17, 0.6) 58.46%,
-      rgba(18, 18, 17, 0) 90.36%
-    ),
-    url("./images/maldives-1993704.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
-  text-align: left;
-}
-
-.container-left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  padding-top: 64px;
-}
-
 .header {
   position: fixed;
   top: 0;
@@ -133,7 +132,7 @@ input:-webkit-autofill {
   padding: 10px;
 }
 
-.header-container {
+.header__container {
   display: flex;
   align-items: center;
   gap: 40px;
@@ -143,14 +142,14 @@ input:-webkit-autofill {
   margin: 0 auto;
 }
 
-.header-nav {
+.header__nav {
   display: flex;
   align-items: center;
   flex-grow: 1;
   gap: 40px;
 }
 
-.logo {
+.header__logo {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -161,30 +160,30 @@ input:-webkit-autofill {
   text-decoration: none;
 }
 
-.logo-text {
+.header__logo-text {
   color: var(--color-primary-light);
   font-size: 20px;
   font-weight: bold;
 }
 
-.header-menu {
+.header__menu {
   display: flex;
   gap: 32px;
   flex-grow: 1;
   justify-content: center;
 }
 
-.link {
+.header__link {
   font: 1em sans-serif;
   color: var(--color-primary-light);
   transition: color 0.3s;
 }
 
-.link:hover {
+.header__link:hover {
   color: var(--color-secondary-dark);
 }
 
-.search-container {
+.header__search {
   display: flex;
   gap: 10px;
   align-items: center;
@@ -193,7 +192,7 @@ input:-webkit-autofill {
   border-radius: 50px;
 }
 
-.input-control {
+.header__search-input {
   font-size: 14px;
   flex-grow: 1;
   min-width: 224px;
@@ -203,18 +202,18 @@ input:-webkit-autofill {
   text-align: center;
 }
 
-.input-control::placeholder {
+.header__search-input::placeholder {
   color: var(--color-brand-normal);
 }
 
-.input-control:focus {
+.header__search-input:focus {
   border-color: transparent;
   outline: none;
 }
 
 /* HERO */
 
-.hero-section {
+.hero {
   min-height: 100vh;
   padding: 272px 0 120px;
   background-image: linear-gradient(
@@ -230,7 +229,7 @@ input:-webkit-autofill {
   text-align: left;
 }
 
-.hero-grid {
+.hero__grid {
   display: grid;
   grid-template-columns: 80px 1fr 1fr;
   gap: 64px;
@@ -241,7 +240,7 @@ input:-webkit-autofill {
   padding: 0 24px;
 }
 
-.social-line {
+.sidebar__social-line {
   position: absolute;
   left: 3%;
   top: 15%;
@@ -251,7 +250,7 @@ input:-webkit-autofill {
   margin-bottom: 64px;
 }
 
-.social-icons-vertical {
+.sidebar__social-icons {
   position: absolute;
   left: 2%;
   top: 60%;
@@ -261,45 +260,45 @@ input:-webkit-autofill {
   gap: 1.5rem;
 }
 
-.social-icons-vertical img {
+.sidebar__social-icons img {
   width: 32px;
   height: 32px;
   filter: brightness(0) invert(1);
 }
 
-.hero-content {
+.sidebar__content {
   max-width: 720px;
   color: var(--color-primary-light);
 }
 
-.hero-content h1 {
+.hero__title {
   font-size: 4rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
   line-height: 1.2;
 }
 
-.hero-content p {
+.hero__description {
   font-size: 1.1rem;
   margin-bottom: 2rem;
   line-height: 1.6;
 }
 
-.book-now {
+.hero__button--book {
   margin-top: 16px;
 }
 
-.book-now:hover {
+.hero__button--book:hover {
   background-color: #006666;
 }
 
-.hero-results {
+.hero__results {
   display: grid;
   gap: 24px;
   max-width: 400px;
 }
 
-.result-card {
+.hero__result-card {
   background-color: var(--color-brand-light);
   border-radius: 12px;
   padding: 16px;
@@ -307,42 +306,31 @@ input:-webkit-autofill {
   text-align: center;
 }
 
-.result-image {
+.hero__result-image {
   width: 100%;
   max-width: 320px;
   border-radius: 8px;
   margin-bottom: 12px;
 }
 
-.result-title {
+.hero__result-title {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 8px;
 }
 
-#resultsContainer .result-description {
+#resultsContainer .hero__result-description {
   font-size: 16px;
   color: var(--color-brand-dark);
 }
 
 /* ABOUT US */
-.section {
-  min-height: 100vh;
+
+.about__section {
   padding: 20px 0 120px;
-  background-image: linear-gradient(
-      103deg,
-      rgba(1, 46, 33, 0.78) 2.03%,
-      rgba(18, 18, 17, 0.6) 58.46%,
-      rgba(18, 18, 17, 0) 90.36%
-    ),
-    url("./images/maldives-1993704.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
-  text-align: left;
 }
 
-.about-grid {
+.about__grid {
   display: grid;
   grid-template-columns: 80px 1fr;
   gap: 64px;
@@ -351,7 +339,7 @@ input:-webkit-autofill {
   max-width: 1288px;
 }
 
-.about-content {
+.about__content {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -359,42 +347,41 @@ input:-webkit-autofill {
   padding: 4rem;
 }
 
-.about-title {
+.about__title {
   font-size: 4rem;
   font-weight: 900;
   margin-bottom: 1rem;
 }
 
-.about-description {
-  max-width: 800px;
-  margin-bottom: 4rem;
-  padding-left: 1em;
-}
-
-.about-description p {
-  font-size: 1em;
+.about__description {
+  font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
+  max-width: 1280px;
+  margin-bottom: 4rem;
+  padding-left: 1em;
+  background-color: rgba(49, 38, 26, 0.3);
+  border-radius: 8px;
 }
 
-.team-section {
+.team {
   margin-top: 4rem;
   padding-left: 4rem;
 }
 
-.team-section h2 {
-  font-size: 3rem;
-  margin-bottom: 2rem;
-}
-
-.team-cards {
+.team__cards {
   display: flex;
   gap: 20px;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.team-card {
+.team__title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.team__member {
   width: 256px;
   height: 128px;
   display: flex;
@@ -406,34 +393,34 @@ input:-webkit-autofill {
   border-radius: 8px;
 }
 
-.member-avatar {
+.team__avatar {
   align-self: flex-start;
 }
 
-.member-avatar img {
+.team__avatar img {
   width: 48px;
   height: 48px;
   border-radius: 50%;
 }
 
-.member-info {
+.team__info {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.member-name {
+.team__name {
   font-weight: 600;
   margin: 0;
 }
 
-.member-description {
+.team__description {
   margin: 0;
   font-size: 1rem;
   color: var(--color-brand-light);
 }
 
-.member-role {
+.team__role {
   margin-top: 0.5rem;
   padding: 0.4rem 0.8rem;
   color: white;
@@ -444,11 +431,11 @@ input:-webkit-autofill {
 
 /* CONTACT US */
 
-.contact-section {
+.contact__section {
   padding: 60px 0 120px;
 }
 
-.contact-grid {
+.contact__grid {
   display: grid;
   grid-template-columns: 80px 1fr 2fr;
   gap: 64px;
@@ -457,97 +444,25 @@ input:-webkit-autofill {
   padding-top: 80px;
 }
 
-.contact-content {
+.contact__content {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
   padding-top: 2rem;
 }
 
-.contact-title {
+.contact__title {
   font-size: 4rem;
   font-weight: 900;
   margin-bottom: 1rem;
 }
 
-.contact-intro {
-  font-size: 1.5rem;
+.contact__subtitle {
+  font-size: 1.2rem;
   color: var(--color-brand-light);
 }
 
-/* .contact-form-container {
-  max-width: 600px;
-  background: rgba(var(--color-primary-dark));
-  backdrop-filter: opacity(20%);
-  padding: 2rem;
-  border-radius: 10px;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.form-group label {
-  font-size: 1.1rem;
-  font-weight: 500;
-}
-
-.form-group input,
-.form-group textarea {
-  padding: 0.8rem;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 5px;
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  font-size: 1rem;
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.form-group textarea {
-  min-height: 150px;
-  resize: vertical;
-}
-
-.submit-btn {
-  background-color: #008080;
-  color: white;
-  border: none;
-  padding: 1rem;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.submit-btn:hover {
-  background-color: #006666;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: #008080;
-  box-shadow: 0 0 0 2px rgba(0, 128, 128, 0.2);
-}
-
-.contact-hero-section .social-icons {
-  z-index: 10;
-} */
-
-.contact-form-container {
+.contact__form-wrapper {
   max-width: 600px;
   background-color: rgba(49, 38, 26, 0.2);
   padding: 2rem;
@@ -555,17 +470,17 @@ input:-webkit-autofill {
   color: var(--color-primary-light);
 }
 
-.contact-form {
+.contact__form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.contact-section__form-field {
-  margin-bottom: 24px;
+.contact__field {
+  margin-bottom: 16px;
 }
 
-.input__control {
+.contact__input {
   padding: 16px 42px;
   width: 100%;
   font-size: 16px;
@@ -576,18 +491,24 @@ input:-webkit-autofill {
   color: var(--color-brand-light);
 }
 
-.input__control:focus {
+.contact__label {
+  position: absolute;
+  top: 16px;
+  left: 42px;
+}
+
+.contact__input:focus {
   border-color: var(--color-brand-light);
   outline: none;
 }
 
-.input__control::placeholder {
+.contact__input::placeholder {
   color: var(--color-primary-light);
   font-size: 16px;
   line-height: 1.17;
 }
 
-.input__control:focus::placeholder {
+.contact__input:focus::placeholder {
   color: var(--color-primary-light);
   opacity: 0.6;
 }
@@ -597,7 +518,7 @@ textarea.input__control {
   resize: vertical;
 }
 
-.contact-section__button {
+.contact__button {
   width: 100%;
   padding: 16px 20px;
   font-size: 16px;
@@ -610,6 +531,7 @@ textarea.input__control {
   transition: background-color 0.3s ease;
 }
 
-.contact-section__button:hover {
-  background-color: #019c88; /* чуть темнее при наведении */
+.contact__button:hover {
+  background-color: #019c88;
+  color: var(--color-primary-light);
 }
